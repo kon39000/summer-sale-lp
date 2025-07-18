@@ -1,7 +1,7 @@
 // カウントダウンタイマー
 function initCountdown() {
-    // セール終了日時（2025年6月28日土曜日16:59）
-    const endDate = new Date('2025-06-28T16:59:00+09:00').getTime();
+    // セール終了日時（2025年7月25日金曜日23:59）
+    const endDate = new Date('2025-07-25T23:59:00+09:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();

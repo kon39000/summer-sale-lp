@@ -269,6 +269,35 @@ a.disabled:hover,
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.sale-announcement {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sale-text {
+    font-size: 2rem;
+    font-weight: bold;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: white;
+}
+
+.discount-text {
+    background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
 .original-price {
