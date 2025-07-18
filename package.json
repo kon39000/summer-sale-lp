@@ -1,0 +1,12 @@
+{
+  "name": "furikou-udemy-sale",
+  "version": "1.0.0",
+  "description": "フリ校Udemy講座セールランディングページ",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Static site - no build required'"
+  },
+  "keywords": ["udemy", "sale", "freelance", "course"],
+  "author": "フリーランスの学校",
+  "license": "ISC"
+}

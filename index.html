@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="夏に負けるなセール！フリ校Udemy講座が期間限定で全て1,300円。ChatGPT活用講座からAIプログラミング、Discord Bot開発まで学べる">
+    <title>【夏に負けるなセール】フリ校Udemy講座 - 全講座1,300円！AIスキルを身につけよう</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- OGP Meta Tags -->
+    <meta property="og:title" content="【夏に負けるなセール】フリ校Udemy講座 - 全講座1,300円！">
+    <meta property="og:description" content="夏に負けるなセール開催中！ChatGPT活用講座からDiscord Bot開発まで全て1,300円で学べる特別セール">
+    <meta property="og:image" content="https://furikousale-ukopoyo-gmailcoms-projects.vercel.app/og-image.png">
+    <meta property="og:url" content="https://furikousale-ukopoyo-gmailcoms-projects.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="フリーランスの学校">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="【夏に負けるなセール】フリ校Udemy講座 - 全講座1,300円！">
+    <meta name="twitter:description" content="夏に負けるなセール開催中！ChatGPT活用講座からDiscord Bot開発まで全て1,300円で学べる特別セール">
+    <meta name="twitter:image" content="https://furikousale-ukopoyo-gmailcoms-projects.vercel.app/og-image.png">
+    <meta name="twitter:site" content="@furikoubot">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <h1>フリ校Udemy</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#courses" class="nav-link">コース一覧</a></li>
+                        <li><a href="#reviews" class="nav-link">受講生の声</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="#apply" class="nav-link cta-button">今すぐ申し込む</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="メニューを開く">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="catchphrase">この夏、AIスキルで差をつけよう！</div>
+                    <div class="sale-badge">夏に負けるなセール</div>
+                    <h2 class="hero-title">
+                        フリ校Udemy講座<br>
+                        <span class="highlight">夏に負けるなセール</span>
+                    </h2>
+                    <p class="hero-subtitle">
+                        ChatGPTを活用したKindle出版・SEO対策・Discord Bot開発まで<br>
+                        AI時代に必要なスキルが全講座1,300円で学べる！
+                    </p>
+                    <div class="price-section">
+                        <div class="original-price">通常価格 ¥27,800〜</div>
+                        <div class="sale-price">
+                            <span class="price-label">特別価格</span>
+                            <span class="price-amount">¥1,300</span>
+                            <span class="discount-rate">95% OFF</span>
+                        </div>
+                    </div>
+                    <div class="countdown-section">
+                        <p class="countdown-label">セール終了まで</p>
+                        <div class="countdown" id="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="days">00</span>
+                                <span class="countdown-unit">日</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="hours">00</span>
+                                <span class="countdown-unit">時間</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="minutes">00</span>
+                                <span class="countdown-unit">分</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="seconds">00</span>
+                                <span class="countdown-unit">秒</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- クーポンコード表示 -->
+                    <div class="coupon-container hero-coupon">
+                        <div class="coupon-label">期間限定クーポンコード</div>
+                        <div class="coupon-code" id="couponCode">
+                            <span class="code-text">250623</span>
+                            <button class="copy-button" id="copyButton" aria-label="クーポンコードをコピー">
+                                <i class="fas fa-copy"></i>
+                                <span class="button-text">コピー</span>
+                            </button>
+                        </div>
+                        <div class="copy-feedback" id="copyFeedback">コピーしました！</div>
+                    </div>
+                    
+                    <a href="#courses" class="cta-button-large">
+                        今すぐコースを見る
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/discordbot.png" alt="Claude Code Discord Bot開発講座" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- コース紹介セクション -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">セール対象コース</h2>
+            <p class="section-subtitle">すべての講座がクーポン使用で一律1,300円</p>
+            
+            <div class="course-grid">
+                <article class="course-card">
+                    <div class="course-image">
+                        <img src="images/kon_kindle.jpg" alt="ChatGPTでKindle出版講座" loading="lazy">
+                        <div class="course-badge">ベストセラー</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">
+                            初心者でもできる！ChatGPTでゼロからはじめるKindle出版：<br>
+                            テーマ決め・文章作成・表紙デザイン完全攻略
+                        </h3>
+                        <div class="course-meta">
+                            <div class="course-instructor">
+                                <img src="images/kon_icon.jpg" alt="講師" class="instructor-avatar">
+                                <span>こん｜AI Contents Labo</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-value">4.3</span>
+                                <span class="rating-count">(10件)</span>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">学習時間</span>
+                                <span class="detail-value">合計3時間</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レクチャー数</span>
+                                <span class="detail-value">40本</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レベル</span>
+                                <span class="detail-value">初級〜中級</span>
+                            </div>
+                        </div>
+                        <ul class="course-features">
+                            <li>ChatGPTを使った効率的な執筆方法</li>
+                            <li>売れるテーマの見つけ方</li>
+                            <li>プロ並みの表紙デザイン作成術</li>
+                            <li>Kindle出版の申請から販売まで</li>
+                        </ul>
+                        <div class="course-price">
+                            <span class="original">¥9,800</span>
+                            <span class="sale">¥1,300</span>
+                        </div>
+                        <a href="https://www.udemy.com/course/chatgpt-kindle/?couponCode=250623" class="course-cta" target="_blank">クーポンを使って申し込む</a>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-image">
+                        <img src="images/course-claude-code.webp" alt="Claude Code講座" loading="lazy">
+                        <div class="course-badge">ベストセラー</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">
+                            Claude Codeで始めるAIプログラミング入門：<br>
+                            HTMLやPythonアプリをVibe Codingで自動生成
+                        </h3>
+                        <div class="course-meta">
+                            <div class="course-instructor">
+                                <img src="images/keisuke_icon.png" alt="講師" class="instructor-avatar">
+                                <span>けいすけ おおの</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-value">4.5</span>
+                                <span class="rating-count">(148件)</span>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">学習時間</span>
+                                <span class="detail-value">合計2時間</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レクチャー数</span>
+                                <span class="detail-value">26本</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レベル</span>
+                                <span class="detail-value">中級</span>
+                            </div>
+                        </div>
+                        <ul class="course-features">
+                            <li>Claude Codeで始めるVibe Coding入門</li>
+                            <li>コード生成・修正・デバッグの効率化</li>
+                            <li>自然言語からの自動コード生成</li>
+                            <li>AI協調開発のベストプラクティス</li>
+                        </ul>
+                        <div class="course-price">
+                            <span class="original">¥4,800</span>
+                            <span class="sale">¥1,300</span>
+                        </div>
+                        <a href="https://www.udemy.com/course/claude-code-vibe-cording/?couponCode=250623" class="course-cta" target="_blank">クーポンを使って申し込む</a>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-image">
+                        <img src="images/nabeken.webp" alt="ChatGPT×SEO講座" loading="lazy">
+                        <div class="course-badge">新着・人気</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">
+                            【新常識】ChatGPT×SEO プロンプト開発マスター講座｜<br>
+                            脱・AIに奪われるブロガー・WebライターになるAI活用
+                        </h3>
+                        <div class="course-meta">
+                            <div class="course-instructor">
+                                <img src="images/nabeken.jpg" alt="講師" class="instructor-avatar">
+                                <span>なべけん 田邉健</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-value">4.9</span>
+                                <span class="rating-count">(16件)</span>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">学習時間</span>
+                                <span class="detail-value">合計6時間</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レクチャー数</span>
+                                <span class="detail-value">66本</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レベル</span>
+                                <span class="detail-value">初級</span>
+                            </div>
+                        </div>
+                        <ul class="course-features">
+                            <li>SEOに強いコンテンツをChatGPTで量産する方法</li>
+                            <li>検索意図を的確に捉えるプロンプト設計</li>
+                            <li>AI時代に生き残るWebライティング戦略</li>
+                            <li>実践的なSEOツールとChatGPTの連携術</li>
+                        </ul>
+                        <div class="course-price">
+                            <span class="original">¥27,800</span>
+                            <span class="sale">¥1,300</span>
+                        </div>
+                        <a href="https://www.udemy.com/course/nabeken-chatgptseo/?couponCode=250623" class="course-cta" target="_blank">クーポンを使って申し込む</a>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-image">
+                        <img src="images/kon_whisper.webp" alt="WhisperとChatGPT講座" loading="lazy">
+                        <div class="course-badge">新講座</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">
+                            WhisperとChatGPTでできる！<br>
+                            音声入力×AIで記事作成入門講座
+                        </h3>
+                        <div class="course-meta">
+                            <div class="course-instructor">
+                                <img src="images/kon_icon.jpg" alt="講師" class="instructor-avatar">
+                                <span>こん</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-value">評価なし</span>
+                                <span class="rating-count">(新講座)</span>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">学習時間</span>
+                                <span class="detail-value">合計1時間</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レクチャー数</span>
+                                <span class="detail-value">15本</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レベル</span>
+                                <span class="detail-value">初級</span>
+                            </div>
+                        </div>
+                        <ul class="course-features">
+                            <li>Whisperを使った高精度音声認識技術</li>
+                            <li>音声入力からAIで自動記事作成</li>
+                            <li>効率的なコンテンツ制作ワークフロー</li>
+                            <li>ChatGPTとの連携による記事品質向上</li>
+                        </ul>
+                        <div class="course-price">
+                            <span class="original">¥2,600</span>
+                            <span class="sale">¥1,300</span>
+                        </div>
+                        <a href="https://www.udemy.com/course/whisper-chatgpt/?couponCode=250623" class="course-cta" target="_blank">クーポンを使って申し込む</a>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-image">
+                        <img src="images/discordbot.png" alt="Claude Code Discord Bot開発講座" loading="lazy">
+                        <div class="course-badge">新講座</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">
+                            Claude Codeと音声入力を活用したDiscord Bot開発講座<br>
+                            〜タスクを自動化するバイブコーディング〜
+                        </h3>
+                        <div class="course-meta">
+                            <div class="course-instructor">
+                                <img src="images/keisuke_icon.png" alt="講師" class="instructor-avatar">
+                                <span>けいすけ おおの</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-value">評価なし</span>
+                                <span class="rating-count">(新講座)</span>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">学習時間</span>
+                                <span class="detail-value">合計3時間</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レクチャー数</span>
+                                <span class="detail-value">35本</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レベル</span>
+                                <span class="detail-value">中級</span>
+                            </div>
+                        </div>
+                        <ul class="course-features">
+                            <li>Claude Codeを使った効率的なBot開発</li>
+                            <li>音声入力によるコーディング手法</li>
+                            <li>Discord API との連携方法</li>
+                            <li>タスク自動化のためのBot設計</li>
+                        </ul>
+                        <div class="course-price">
+                            <span class="original">¥6,800</span>
+                            <span class="sale">¥1,300</span>
+                        </div>
+                        <a href="#" class="course-cta disabled" target="_blank">クーポンリンク準備中</a>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-image">
+                        <img src="images/windsurf_u.png" alt="Windsurfバイブライティング入門" loading="lazy">
+                        <div class="course-badge">ベストセラー</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">
+                            文系のためのWindsurfバイブライティング入門：<br>
+                            AIエージェントのバイブコーディング「じゃない」使い方解説講座
+                        </h3>
+                        <div class="course-meta">
+                            <div class="course-instructor">
+                                <img src="images/umino_icon.jpg" alt="講師" class="instructor-avatar">
+                                <span>ウミノ & フリーランスの学校</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-value">4.7</span>
+                                <span class="rating-count">(134件)</span>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">学習時間</span>
+                                <span class="detail-value">合計2時間25分</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">受講者数</span>
+                                <span class="detail-value">1,792名</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">レベル</span>
+                                <span class="detail-value">初級</span>
+                            </div>
+                        </div>
+                        <ul class="course-features">
+                            <li>AIエージェント「Cascade」の自動化ライティング</li>
+                            <li>マルチカスケード機能で同時コンテンツ作成</li>
+                            <li>ChatGPTでは実現できない資産化とバックアップ</li>
+                            <li>4,000社以上の実績ある企業環境での活用法</li>
+                        </ul>
+                        <div class="course-price">
+                            <span class="original">¥4,800</span>
+                            <span class="sale">¥1,300</span>
+                        </div>
+                        <a href="https://www.udemy.com/course/vibe-writing/?couponCode=250623" class="course-cta" target="_blank">クーポンを使って申し込む</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 受講生の声セクション -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">受講生の声</h2>
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">ココ</div>
+                            <div>
+                                <h4 class="reviewer-name">ココさん</h4>
+                                <div class="review-rating">★★★★★</div>
+                                <span class="review-date">4日前</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        正直、AIの前に「SEOライティング」の講義だけでも、受講する価値は十分にありました。
+                        SNSやブログで見よう見まねで使っていたシステムプロンプトも、実は全然理解できていなかった
+                        ことに気づかされました。表面をなぞっていただけで、本質は見えていなかったと実感。
+                        特に、AI開発を本気でやるなら「ゼロからちゃんと学ぶ必要がある」と気づけたのは大きな収穫です。
+                        そのうえで提供される特典も非常に実用的で魅力に感じました。
+                    </p>
+                    <p class="review-course">受講コース：ChatGPT×SEO プロンプト開発マスター講座</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">GU</div>
+                            <div>
+                                <h4 class="reviewer-name">Go U.さん</h4>
+                                <div class="review-rating">★★★★★</div>
+                                <span class="review-date">3日前</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        なんでも作れるというのは前評判で聞いていたが、実際の作り方を説明するようなソースはなかった為、大変役に立った、且つ面白い。
+                    </p>
+                    <p class="review-course">受講コース：Claude Codeで始めるAIプログラミング入門</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">SY</div>
+                            <div>
+                                <h4 class="reviewer-name">Ss Y.さん</h4>
+                                <div class="review-rating">★★★★★</div>
+                                <span class="review-date">3日前</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        ライター初心者です。AIはこれから勉強したいと思って受講してみましたが、私にとってはSEOライティングについてとても勉強になりました。動画の中でもおっしゃっていましたが、初心者の方にも本当におすすめです！
+                    </p>
+                    <p class="review-course">受講コース：ChatGPT×SEO プロンプト開発マスター講座</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQセクション -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Q. 本当に初心者でも大丈夫ですか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            講座によっては初心者の方には難しいものもあります。
+                            まずはプレビュー動画などを見ていただいて、
+                            ご自身がやりたいと思う講座を選んでいただければと思います。
+                            また、質問体制も整えられているので、そちらをご利用ください。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Q. クーポンはどのように使用しますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            各コースの「クーポンを使って申し込む」ボタンをクリックすると、
+                            クーポンコードが自動的に適用されたUdemyのページが開きます。
+                            すでに割引価格（1,300円）が適用されているので、
+                            そのまま購入手続きをお進めください。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Q. 受講期限はありますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            いいえ、受講期限はありません。
+                            一度購入いただければ、いつでも好きなときに学習できます。
+                            また、講座の内容は定期的にアップデートされますが、
+                            追加料金なしで最新の内容を受講できます。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Q. サポートは受けられますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            講師によりますが、直接講師から回答が来ることもあります。
+                            お問い合わせいただければと思います。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="apply" id="apply">
+        <div class="container">
+            <div class="apply-content">
+                <h2 class="section-title">今すぐコースを選んで申し込む</h2>
+                <p class="apply-subtitle">夏に負けるなセール！全コースがクーポン使用で1,300円</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://www.udemy.com/course/chatgpt-kindle/?couponCode=250623" class="cta-link" target="_blank">
+                        <h3>ChatGPT×Kindle出版講座</h3>
+                        <p>通常価格 ¥9,800 → <span class="price-highlight">¥1,300</span></p>
+                        <span class="cta-button-text">クーポンを使って申し込む</span>
+                    </a>
+                    
+                    <a href="https://www.udemy.com/course/claude-code-vibe-cording/?couponCode=250623" class="cta-link" target="_blank">
+                        <h3>Claude Code AIプログラミング入門</h3>
+                        <p>通常価格 ¥4,800 → <span class="price-highlight">¥1,300</span></p>
+                        <span class="cta-button-text">クーポンを使って申し込む</span>
+                    </a>
+                    
+                    <a href="https://www.udemy.com/course/nabeken-chatgptseo/?couponCode=250623" class="cta-link" target="_blank">
+                        <h3>ChatGPT×SEOマスター講座</h3>
+                        <p>通常価格 ¥27,800 → <span class="price-highlight">¥1,300</span></p>
+                        <span class="cta-button-text">クーポンを使って申し込む</span>
+                    </a>
+                    
+                    <a href="https://www.udemy.com/course/whisper-chatgpt/?couponCode=250623" class="cta-link" target="_blank">
+                        <h3>WhisperとChatGPTで音声記事作成</h3>
+                        <p>通常価格 ¥2,600 → <span class="price-highlight">¥1,300</span></p>
+                        <span class="cta-button-text">クーポンを使って申し込む</span>
+                    </a>
+                    
+                    <a href="#" class="cta-link disabled" target="_blank">
+                        <h3>Claude Code Discord Bot開発講座</h3>
+                        <p>通常価格 ¥6,800 → <span class="price-highlight">¥1,300</span></p>
+                        <span class="cta-button-text">クーポンリンク準備中</span>
+                    </a>
+                    
+                    <a href="https://www.udemy.com/course/vibe-writing/?couponCode=250623" class="cta-link" target="_blank">
+                        <h3>文系のためのWindsurfバイブライティング入門</h3>
+                        <p>通常価格 ¥4,800 → <span class="price-highlight">¥1,300</span></p>
+                        <span class="cta-button-text">クーポンを使って申し込む</span>
+                    </a>
+                </div>
+                
+                <p class="form-note">
+                    ※ 各ボタンをクリックすると、クーポンが適用されたUdemyのページが開きます<br>
+                    ※ リンクが正常に動作しない場合は、クーポンコード「<strong>250623</strong>」を手動で入力してください
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>フリーランスの学校</h3>
+                    <p>運営会社：株式会社むらかみかいぞく</p>
+                    <p>代表者：村上 周平</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="https://murakami-kaizoku.jp/" target="_blank">会社情報</a></li>
+                        <li><a href="https://murakami-kaizoku.jp/お問い合わせ/" target="_blank">お問い合わせ</a></li>
+                        <li><a href="https://freelance-gakkou.com/lp/how-to-freelance-2/" target="_blank">無料メルマガ登録</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://x.com/furikoubot" target="_blank" aria-label="X(Twitter)" class="social-icon">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/furikou_official/" target="_blank" aria-label="Instagram" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://voicy.jp/channel/2006" target="_blank" aria-label="Voicy" class="social-icon">
+                        <i class="fas fa-microphone"></i>
+                    </a>
+                    <a href="https://discord.gg/DyF3RV9pDN" target="_blank" aria-label="Discord" class="social-icon">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 フリーランスの学校. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
